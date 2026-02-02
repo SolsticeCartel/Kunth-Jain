@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunth Jain | Coming Soon</title>
+
+    <title>Kunth Jain | Developer & Designer</title>
+    <meta name="description" content="Official portfolio of Kunth Jain. Web Developer, Designer, and Creator. Check out my projects and connect with me.">
+    <meta name="keywords" content="Kunth Jain, Web Developer, Portfolio, India, Designer, SolsticeCartel">
+    <meta name="author" content="Kunth Jain">
+
+    <meta property="og:title" content="Kunth Jain | Developer & Designer">
+    <meta property="og:description" content="Welcome to my official portfolio. Coming Soon.">
+    <meta property="og:image" content="https://kunthjain.in/me.png">
+    <meta property="og:url" content="https://kunthjain.in">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
@@ -201,7 +211,6 @@
 <body>
 
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-        <!-- Default is Dark, so we show Sun (to switch to light) initially -->
         <span id="sun-icon"><i data-lucide="sun" class="icon"></i></span>
         <span id="moon-icon" style="display: none;"><i data-lucide="moon" class="icon"></i></span>
     </button>
@@ -269,6 +278,7 @@
             var img = document.getElementById("profile-img");
             var modalImg = document.getElementById("modal-img");
 
+            // Only open if image is visible/valid
             if (img.style.display !== 'none') {
                 modal.style.display = "flex";
                 modalImg.src = img.src;
@@ -276,6 +286,7 @@
         }
 
         function closeModal(event) {
+            // Close if clicking the X or the background (but not the image itself)
             if (event.target.id === "imageModal" || event.target.className === "close") {
                 document.getElementById("imageModal").style.display = "none";
             }
